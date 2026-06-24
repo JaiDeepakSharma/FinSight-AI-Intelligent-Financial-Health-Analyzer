@@ -1,0 +1,30 @@
+# Python virtual environments & dependencies
+**/venv/
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+
+# Databases & local configs
+**/.env
+**/.env.local
+**/*.db
+**/finsight_chroma/
+**/.pytest_cache/
+**/.DS_Store
+
+# Frontend packages & build outputs
+**/node_modules/
+**/dist/
+**/.svelte-kit/
+**/.next/
+**/.nuxt/
+**/.cache/
+**/dist-ssr/
+**/*.local
+
+# Logs and runtime artifacts
+**/*.log
+**/.system_generated/

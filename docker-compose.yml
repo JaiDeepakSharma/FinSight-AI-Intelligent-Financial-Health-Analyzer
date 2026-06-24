@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./finsight.db
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - JWT_SECRET_KEY=a7d2f9e4c3b8a1c0d5e9f8a2b3c4d5e6
+      - JWT_ALGORITHM=HS256
+      - ACCESS_TOKEN_EXPIRE_MINUTES=60
+    volumes:
+      - ./backend:/app
+      - backend-db:/app/data
+    restart: always
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    depends_on:
+      - backend
+    restart: always
+
+volumes:
+  backend-db:

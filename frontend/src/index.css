@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slateDark-bg text-slateDark-text font-sans selection:bg-brand-500/30 selection:text-white font-light;
+  }
+}
+
+/* Scrollbar customizations */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 0px; /* Sharp corners */
+  border: 2px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3c3c;
+}
+
+/* Chrome autofill styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #f1f5f9;
+  -webkit-box-shadow: 0 0 0px 1000px #151b2c inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
