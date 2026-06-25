@@ -18,7 +18,7 @@
 # Frontend packages & build outputs
 **/node_modules/
 **/dist/
-!backend/dist/
+
 **/.svelte-kit/
 **/.next/
 **/.nuxt/
